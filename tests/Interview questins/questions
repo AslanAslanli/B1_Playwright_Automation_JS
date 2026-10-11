@@ -1,0 +1,29 @@
+1. difference between npx and npm commands?
+2. why dont you ever commit .env file?
+3. how can u make sure that multiple tests all use the same browser session? single login for all.
+4. what does .toBeFocused function check. give a real ui example
+5. use toHaveText with multiple element texts
+6. write a util method that returns a cell value per colName and rowNum
+7. explan "promise, async+await, asynchrous functions" in your own words
+8. what is the difference btw parallel execution and asynchonous function execution?
+9. Why getByRole is preferred over getByLabel?
+10. What is the difference between toEqual and toStrictEqual? Compare [1, ,3] to [1, undefined, 3]
+11. page.on vs page.once? can you register page.on after clicking for alert? Write a test case to 
+    handle all 3 alert types using a single page.on() listener. 
+12. textContext() vs innerText() vs allTextContents()
+
+<h2 id="title">Welcome <span style="display:none">Hidden Text</span></h2>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li style="display:none">Mango</li>
+  <li>Orange</li>
+</ul>
+
+await locator.innerText() → "Welcome"
+await locator.textContent() → "Welcome Hidden Text"
+await page.locator("li").allTextContents() → ["Apple", "Banana", "Mango", "Orange"]
+
+
+
+

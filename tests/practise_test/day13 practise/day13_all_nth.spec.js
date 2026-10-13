@@ -19,8 +19,7 @@ test.describe("Day 13 - Task 1 and 2", () => {
     await saucePassword.fill(process.env.SAUCE_PASSWORD);
     await loginButton.click();
 
-    productNames = await page
-      .locator("//div[@class='inventory_item_name ']").all();
+    productNames = await page.locator("//div[@class='inventory_item_name ']").all();
     productNames2 = page.locator("//div[@class='inventory_item_name ']");
   });
 
@@ -47,4 +46,6 @@ test.describe("Day 13 - Task 1 and 2", () => {
       }
     }
   });
+
+  
 });

@@ -1,86 +1,72 @@
-// MAIN PAGE:
-// 1. Locate the heading: An iFrame containing the TinyMCE WYSIWYG Editor
-// --> let alert = page.locator("//div[@role='alert']");
-// 2. Assert it is visible.
-// --> alert.toBeVisible();
-
-// IFRAME:
-// 3. Access the iframe.
-// 4. Locate the editable area.
-// 5. Assert it is visible.
-// 6. Enter: Loopcamp Playwright
-// 7. Assert it contains: Loopcamp Playwright
-
-// Question: Which element belongs to the main page and which belongs to the iframe?
-// alert message to main page. text area to iFrame
-
-//   Test 2 - JavaScript Dialog URL:
-//   https://the-internet.herokuapp.com/javascript_alerts
-
-// - Trigger the JS Prompt.
-// - Handle it using page.on().
-// - Enter: Loopcamp Student
-// - Accept it.
-// - Assert Result contains: You entered: Loopcamp Student
-
 import { test, expect } from "@playwright/test";
-import { log } from "node:console";
 
-test.describe("Advanced Playwright Practice", () => {
+test.describe("Day 13 - iFrame tests", () => {
+  test("Task 10, 11", async ({ page }) => {
+    page.goto(`${process.env.LC_PRACTICE_BASE_URL}/iframe.html`);
 
-  test.describe("Test 1", () => {
-    let sauceUsername;
-    let saucePassword;
-    let loginButton;
+    const frameLocator = page.frameLocator("//iframe[@id='mce_0_ifr']");
+    const textArea = frameLocator.locator("//body[@id='tinymce']");
 
-    let allProducts;
+    await textArea.fill("Playwright iFrame Practice");
+    await expect(textArea).toHaveText("Playwright iFrame Practice");
+    //await page.waitForTimeout(3000);
+  });
 
-    test.beforeEach("Before each", async ({ page }) => {
-      await page.goto(`${process.env.SAUCEDEMO_URL}`);
-      sauceUsername = page.locator("#user-name");
-      saucePassword = page.locator("#password");
-      loginButton = page.locator("#login-button");
+  // Question: Which element belongs to the main page and which belongs to the iframe?
+  // Answer: TinyMCE belongs to main page. Text area belongs to iFrame
+  test("Task 12", async ({ page }) => {
+    page.goto(`${process.env.LC_PRACTICE_BASE_URL}/iframe.html`);
 
-      // login
+    const frameLocator = page.frameLocator("//iframe[@id='mce_0_ifr']");
+    const textArea = frameLocator.locator("//body[@id='tinymce']");
+
+    await textArea.fill("Playwright iFrame Practice");
+    await expect(textArea).toHaveText("Playwright iFrame Practice");
+  });
+  // - Login.
+  // - Get all product names using .all().
+  // - Loop through them.
+  // - Print each name.
+  // - Find and click: Sauce Labs Onesie
+  // - Assert the detail page contains: Sauce Labs Onesie
+
+  //   Test 2 - JavaScript Dialog URL:
+  //   https://the-internet.herokuapp.com/javascript_alerts
+
+  // - Trigger the JS Prompt.
+  // - Handle it using page.on().
+  // - Enter: Loopcamp Student
+  // - Accept it.
+  // - Assert Result contains: You entered: Loopcamp Student
+
+  //   Test 3 - iFrame URL:
+  //   https://the-internet.herokuapp.com/iframe
+
+  // - Access the iframe.
+  // - Locate the editable area.
+  // - Enter: Final Playwright Practice
+  // - Assert it contains: Final Playwright Practice
+  test.describe("Bonus Task - Advanced Playwright Practice", () => {
+    test("Test 1", async ({ page }) => {
+      await page.goto(process.env.SAUCEDEMO_URL);
+
+      const sauceUsername = page.getByPlaceholder("Username");
+      const saucePassword = page.getByPlaceholder("Password");
+      const loginButton = page.getByText("Login");
+
       await sauceUsername.fill(process.env.SAUCE_USERNAME);
       await saucePassword.fill(process.env.SAUCE_PASSWORD);
       await loginButton.click();
 
-      await page.waitForTimeout(3000);
-
-      allProducts = await page.locator("//div[@class='inventory_item_name ']").all();
-    });
-
-    test("Sauce demo test", async ({ page }) => {
-      for (const product of allProducts) {
-        console.log(await product.textContent());
+      let products = await page.locator("//div[normalize-space(@class)='inventory_item_name']").all();
+      for (const eachProduct of products) {
+        console.log(await eachProduct.textContent());
       }
 
-      for (const product of allProducts) {
-        if (await product.textContent().toBe("Sauce Labs Onesie")) {
-          await product.click();
-          await page.waitForTimeout(3000);
-          let productTitle = page.getByText('Sauce Labs Onesie');
-          await expect(productTitle).toBeVisible();
-          break;
-        }
-      }
-    });
-  });
-
-  test.describe("Test 3", () => {
-    let iFrame;
-    let textArea;
-
-    test.beforeEach(async ({ page }) => {
-      await page.goto(`${process.env.LC_PRACTICE_BASE_URL}/iframe.html`);
-      iFrame = page.frameLocator("iframe.tox-edit-area__iframe");
-      textArea = iFrame.locator("body#tinymce");
     });
 
-    test("Task10, 11, 12, 13", async () => {
-      await textArea.fill("Playwright iFrame Practice");
-      await expect(textArea).toHaveText("Playwright iFrame Practice");
-    });
+    test("Test 2", async ({ page }) => {});
+
+    test("Test 3", async ({ page }) => {});
   });
 });

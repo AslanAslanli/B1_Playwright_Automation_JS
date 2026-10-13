@@ -29,9 +29,6 @@ test.describe("Day 13 - Task 1 and 2", () => {
       console.log(await element.innerText());
     }
 
-    console.log("Hola hola");
-    
-
     for (let i = 0; i < (await productNames2.count()); i++) {
       await productNames2.nth(1).click();
       let productText = page.locator("//*[.='Sauce Labs Bike Light']");

@@ -61,7 +61,7 @@ test.describe("Day 13 - iFrame tests", () => {
       let products = await page.locator("//div[normalize-space(@class)='inventory_item_name']").all();
       for (const eachProduct of products) {
         console.log(await eachProduct.textContent());
-      }
+      }    
 
     });
 

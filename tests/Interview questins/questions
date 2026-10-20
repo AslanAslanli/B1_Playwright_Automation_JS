@@ -24,6 +24,16 @@ await locator.innerText() → "Welcome"
 await locator.textContent() → "Welcome Hidden Text"
 await page.locator("li").allTextContents() → ["Apple", "Banana", "Mango", "Orange"]
 
+13. What is the difference between swtiching tabs with context vs page?
 
+page.waitForEvent('popup'):
 
+Waits for a new tab that was opened by that specific page	
+More specific	
+Best when the current page triggers the tab	
+--------------------------------
+context.waitForEvent('page'):
 
+Waits for any new page/tab in the browser context
+More general
+Useful when you don't know which page creates the tab

@@ -24,6 +24,7 @@ test.describe("Web Tables", () => {
         expect (allRows.length === 9).toBeTruthy(); 
         expect (allColumns.length === 13).toBeTruthy(); 
         expect (allCells.length === 104).toBeTruthy(); 
+        expect (allCells.length).toEqual(104); 
     
     });
 
@@ -42,7 +43,6 @@ test.describe("Web Tables", () => {
         }
 
 
-        
         // This allCells -> get all the information and stores []
         // To be able to skip all the first columna dn all the last column, we need to first loop through rows itself 
         console.log("*********************************************");
@@ -50,12 +50,11 @@ test.describe("Web Tables", () => {
         for (let i = 1; i < allRows.length; i++){
             // find all the cell for each row 
             let eachRowAllCells = await allRows[i].locator("//td").all();
-                                  // (//table [@class='SampleTable']//tbody//tr)[2]//td
+            // (//table [@class='SampleTable']//tbody//tr)[2]//td
             
             // Skip the first and last cell for each row and take inner text for all the others. 
             for (let i = 1; i < eachRowAllCells.length-1; i++ ){
                 console.log(await eachRowAllCells[i].innerText());
-                cl
             }
         }
     

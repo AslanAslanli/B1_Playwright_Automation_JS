@@ -46,10 +46,10 @@ test.describe("Mouse Actions", () => {
     let elementToBeDropped = page.locator("#column-b");
 
     await page.dragAndDrop("#column-a", "#column-b");
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(2000);
 
     await elementToBeDragged.dragTo(elementToBeDropped);
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(2000);
   });
 
   test("Double click", async ({ page }) => {
@@ -73,7 +73,7 @@ test.describe("Mouse Actions", () => {
     // scroll function
     const element = page.getByText("New tab", { exact: true });
     await element.scrollIntoViewIfNeeded();
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(2000);
   });
 });
 
@@ -95,7 +95,7 @@ test.describe("Keyboard Actions", () => {
     await page.waitForTimeout(2000);
 
     await page.keyboard.press("Enter");
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(2000);
   });
 
 

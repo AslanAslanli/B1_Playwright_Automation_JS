@@ -1,0 +1,181 @@
+IMPORTANT! 
+
+	-Do NOT create these tasks on B#_JS_Programming project. 
+	-Use the one you created for practicing. If you have not created one. You can create a new project and name it Practice_Programming
+
+    -Add a package called day##_tasks in src folder
+
+------------------------------------------
+
+Tasks 1 - NumberArray 
+
+    Once you have your answers then you can create a file called GradeAfterRetake.js in your Practice_Programming project and inside the day##_tasks package. You can put all tasks in one class
+        
+
+        Task:
+                Create a function that accepts an array. 
+                By looping up until 10 starting from 0 as indexes in array start from 0, assing values from starting 10
+                Then use a for each loop to print out all the elements of the array
+
+
+------------------------------------------
+
+Task 2 - Initials
+
+    Create a file called Initials.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+		Create a function that accepts an array (Strings). 
+        Call the function and pass an array of classmate’s names, first name and last separated by a space, 
+        And print the initials of everyone in array
+
+             Ex: 
+                Input:
+                		[ “James Bond”, “Eve Rell”, “Anna Johnson” ] Output:
+                	
+			    Output:	
+				        JB ER AJ
+
+
+
+------------------------------------------
+
+Task #3 - LongestAndShortestStrings
+
+    Create a file called LongestAndShortestStrings.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+            Create a function that accepts an array and returns the shortest and longest string element in another array 
+
+
+------------------------------------------
+
+Task #4 - WebsiteChecker (There is a method we have not covered yet for this - you may leave this one for now)
+
+    Create a file called WebsiteChecker.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                Create a function that accepts an array
+                And etermines how many .com, .org, and .edu websites there are.
+                Also keep track of an ‘other’category for websites that have a different domain
+            
+                Ex:
+                    Input:  
+                        websites for an array:
+                            bing.com, wikimedia.org, twitter.com, amazonaws.com, japanpost.jp, mysql.com, nasa.gov, linkedin.com,
+                            ucla.edu, github.io, spotify.com, mozilla.org, nba.com, comcast.net, tamu.edu, utexas.edu,
+                    Otput
+                        com - 7
+                        org - 2
+                        jp - 1
+                        gov - 2
+                        edu - 3
+                        io - 1
+                        net - 1
+
+                Note: Use nested loop
+
+
+------------------------------------------
+
+Task #5 - GradebookOne
+
+    Create a file called GradebookOne.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                Declare three arrays:
+            
+                1.String array which will hold names for the students (give values)
+                2.Number array which has the score of the student got in the quiz (give values - numbers )
+                3.Output the grade book at the end with all the information
+
+                Create a function that accepts two arrays and check the grade where it falls with the conditons below. 
+
+                    Grade scale:
+                        Above 85: A
+                        Above 75: B
+                        Above 65: C
+                        Other:    D
+                
+
+                Then print: "$studentName grade: A"
+
+
+
+------------------------------------------
+
+Task #6 - Countries
+
+    Create a file called Countries.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+
+            Create a function that accepts an array and find and print all the first and last characters of each country
+            Create a function that accepts an array and find and print all the countries that end with the letter ‘a’
+            
+
+            EX:
+                Input:  
+                    String[] countries = { 
+                        "Brazil", "China", "Cuba", "Sweden", "France", "Vietnam", "Albania", "Portugal", "Philippines", "Colombia", "Honduras", "Indonesia", "United States"
+                    };
+
+                Output (for first function):
+                    Bl
+                    Ca
+                    Ca
+                    .
+                    .
+                    .
+                    Us
+
+                Output (for second function):
+                    China
+                    Cuba
+                    Albania
+                    Colombia
+                    Indonesia
+
+
+------------------------------------------
+
+Task #7 - LongestPalindrome [IQ]
+
+    Create a file called LongestPalindrome.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+
+            Create a function that accepts String array
+            Find the longest Palindrome String in your array.
+
+            Ex:
+                Input: 
+                    [js, “longer word”, “civic” “apple”, “racecar”, “mom”, “anna”]
+                Output: 
+                    racecar
+
+            Ex:
+                Input: 
+                    [“abc”, “dna”, “kevin”, “joe”, “lamp”]
+                Output: 
+                    No palindrome
+
+
+------------------------------------------
+
+Task #8 - EvenOrOddInArray
+
+    Create a file called EvenOrOddInArray.js in your Practice_Programming project and inside the day##_tasks package 
+
+
+    Write a functino that accpets array of numbers and count the even and odd number from an array of numbers
+
+    Ex:
+        Input: [4,1,3,12,5]
+
+        Output:
+            Even: 2
+            Even Numbers: 4 12
+
+            Odd: 3
+            Odd Numbers: 1 3 5

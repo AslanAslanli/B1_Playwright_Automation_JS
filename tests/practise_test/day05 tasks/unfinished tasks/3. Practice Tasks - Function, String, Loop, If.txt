@@ -1,0 +1,345 @@
+IMPORTANT! 
+
+	-Do NOT create these tasks on B#-JS_Programming project. 
+	-Use the one you created for practicing. If you have not created one. You can create a new project and name it Practice_Programming
+
+    -Add a package called day##_tasks in src folder
+
+
+------------------------------------------
+
+Task 1 - BiggestSubstring
+
+    Create a file called BiggestSubstring.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                    Write a function that accepts a String and finds biggest substring of matching characters and print it
+                
+                
+                    Ex: aaabbbcccccddddee
+                    Output: ccccc
+
+
+
+------------------------------------------
+
+Task #2 - CountUpperLowerNumbers
+
+    Create a file called CountUpperLowerNumbers.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                Write a function that accepts a String and Counts uppercase letters, lowercase letters, and numbers
+            
+            
+                    Ex:
+                        Input:
+                            2juMp41EEkd4s4
+                        Output:
+                            3 uppercase letters
+                            6 lowercase letters
+                            5 numbers
+
+                    Note: To find the Uppercase, lowercase, and number "Regex" is being used in JavaScript. Ask in Copilot AI to get more info
+
+                            /^\d$/.test(ch)             // digit
+                            /^[a-z]$/.test(ch)          // English lowercase letter
+                            /^[A-Z]$/.test(ch)          // English uppercase letter
+
+
+                            Ex:
+                                let ch = "G";
+
+                                console.log(/^\d$/.test(ch));    // false
+                                console.log(/^[a-z]$/.test(ch)); // false
+                                console.log(/^[A-Z]$/.test(ch)); // true
+
+
+------------------------------------------
+
+Task #3 - CountUpsLowsNums
+
+    Create a file called CountUpsLowsNums.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                Wite a function that accepts a String (a sentence) and determines and returns how many words are in the String.
+                    Ex:
+                        Input:
+                            This has multiple words
+                        Output:
+                            4
+
+------------------------------------------
+
+Task #4 - CountWords
+
+    Create a file called CountWords.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+     		Create a function that accpets two Strings
+
+    		When function is call and both strings passed to function, they should be at least 6 character long.
+        		If they are shorter than that
+            			print “Invalid data” and program should end.
+        		If the information provided is valid,
+            			you will take the first 4 characters of first string and combine them with the last three characters of the second string.
+
+        		At the end of your combined string add “@loopcamp.io” and print the final string as your created email.
+
+        		The final email should be in all lowercase.
+
+        		input: JamesBond Secret
+        		output: jameret@loopcamp.io
+
+
+------------------------------------------
+
+Task #5 - [IQ]Anagram
+
+    Create a file called Anagram.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+            
+                Write a function that accepts two Strings and determines if they are anagram or not. 
+                Note: Being anagram is if they are built up of the same characters
+            
+                    Ex:
+                        listen
+                        silent
+            
+                        -> anagram
+            
+                    Hint: look up and use replace() method
+
+------------------------------------------
+
+Task #6 - RemoveDuplicates
+
+    Create a file called RemoveDuplicates.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+            
+                Write a function that accepts String and removes duplicates from a String
+            
+                Ex:
+                    Input: abcabc
+                    Output: abc
+
+
+------------------------------------------
+
+Task #7 - Syllables
+
+    Create a file called Syllables.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+		  Write a function that accepts String separated by dashes and calculates and returns how many syllables the words are
+                
+                Ex:
+                    Input:
+                        ja-va
+                    Output:
+                        2
+				
+
+------------------------------------------
+
+Task #8 - CreateID
+
+    Create a file called CreateID.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                   
+                
+                Write a function and accepts two Strings like a first name and last name create and return an id using the following format:
+                        the first letter of the first name as lowercase,
+                        the first 3 letters of the last name with the first letter as uppercase and the rest lowercase,
+                        the length of the first String multiplied by 2
+                
+                            first name: john
+                            last name: smith
+                
+                            id: jSmi8
+				
+
+------------------------------------------
+
+Task #9 - HTMLGenerator
+
+    Create a file called HTMLGenerator.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                HTML Generator [String, Loops]
+            
+                Create a function that accepts a String 
+                And a String is in the following format take the number part and the generate the html tags
+            
+                    Ex:
+                        Input:
+                            div^2
+                        Output:
+                            <div></div><div></div>
+                    Ex:
+                        Input:
+                            li^3
+                        Output:
+                            <li></li><li></li><li></li>
+
+                    Note:
+                        let number = Number(str.split("^")[1]);  //Convert Sting num to number num.
+
+------------------------------------------
+
+Task #10 - MoodRing (Switch)
+
+    Create a file called MoodRing.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                    Create a function that accepts a color as String 
+                    And determines what mood you are in based on the color.
+                    The color will also provide a max budget value that is suggested for shopping
+                
+                        data:
+                            pink:
+                                mood: happy
+                                budget: 200
+                            blue:
+                                mood: relaxed
+                                budget: 150
+                            orange:
+                                mood: nervous
+                                budget: 50
+                            red:
+                                mood: angry
+                                budget: 0
+
+
+------------------------------------------
+
+Task #11 - MultiplyEnd
+
+    Create a file called MultiplyEnd.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                
+                    Write a function that accepts a String and number and return a String that has the ending character duplicated and attached by the number amount of times
+                
+                        Ex:
+                            Input:
+                                Hello?
+                                3
+                            Output:
+                                Hello????
+                
+                        Ex:
+                            Input:
+                                java
+                                5
+                            Output:
+                                javaaaaaa
+				
+
+------------------------------------------
+
+Task #12 - SpaceProgram
+
+    Create a file called SpaceProgram.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                    Write a function that accepts a String and returns a version of with spaces between all of the letters.
+                    If there is already a space in the String put an underscore
+                        - (ch === " "); // true
+                
+                        Ex: java   -> j a v a
+                            space      -> s p a c e
+                            more words -> m o r e _ w o r d s
+			
+
+
+			
+
+
+------------------------------------------
+
+Task #13 - SwitchInLoop
+
+    Create a file called SwitchInLoop.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+
+            Write a function that accepts a number (n). number can between 0 - 5. 
+            In the body of the function use loop to iterate n times (from 0 to n). 
+            Use switch statement in the loop and print out for each case 
+            Ask Copilot AI about the use case of switch in JavaScript
+                    
+        		Ex:
+                            Input:
+                            	5
+                            Output:
+                            	Zero
+
+
+------------------------------------------
+
+
+Task #14 - CountJS (HARD TASK)
+
+    Create a file called CountJS.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+		Create a function that accepts a String and counts how many time the word "js" is there (no matter of Uppercase or lowercase)
+
+
+                Input:
+                    "JS is a language. Js is good language"
+
+         	    Output:
+			     2
+
+
+------------------------------------------
+
+
+Task #15 - PrimeNumbers (Interview Question)
+
+    Create a file called PrimeNumbers.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                [IQ] Iterview Question - Prime number [Loops]
+            
+                Create a function that accepts a number and determines if it is a prime number. 
+                Note: A prime number is a number that is only divisible by 1 and itself.
+            
+                Ex:
+                    Input:
+                        11
+            
+                    Output:
+                        prime
+            
+                Ex:
+                    Input:
+                        10
+            
+                    Output:
+                        not prime
+
+
+------------------------------------------
+
+Task #16 - CamelCase
+
+    Create a file called CamelCase.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+               Create a functino that accepts a String with multiple words separated by spaces, 
+               Create a camel case version of the String. 
+               Note: camelCase is Every word, except the first word, begin with an uppercase letter. The other characters of the word will be lowercase
+            
+                Ex:
+                    Input:
+                        Today is SUNDAY
+            
+                    Output:
+                        todayIsSunday
+
+------------------------------------------

@@ -1,0 +1,94 @@
+IMPORTANT! 
+
+	-Do NOT create these tasks on B#-JS_Programming project. 
+	-Use the one you created for practicing. If you have not created one. You can create a new project and name it Practice_Programming
+
+    -Add a package called day##_tasks in src folder
+
+
+------------------------------------------
+
+Task #1 - CreatingAnEmail
+
+    Create a file called CreatingAnEmail.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+     		Declare two variables and assing strings.
+
+    		Both strings should be at least 6 character long.
+        		If they are shorter than that
+            			print “Invalid data” and program should end.
+        		If the information provided is valid,
+            			you will take the first 4 characters of first string and combine them with the last three characters of the second string.
+
+        		At the end of your combined string
+            			add “@loopcamp.io” and print the final string as your created email.
+
+        		The final email should be in all lowercase.
+
+        		input: JamesBond Secret
+        		output: jameret@loopcamp.io
+				
+
+------------------------------------------
+
+Task #2 - RemoveFirstAndLast
+
+    Create a file called RemoveFirstAndLast.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                Declare two variables and assing strings.
+
+                Given two words. Print the first word without its first character then print the second word without its last character.
+            
+                    Input:
+                        apple banana
+                    Output:
+                        pple
+                        banan
+
+------------------------------------------
+
+Task #3 - ReplaceProgram
+
+    Create a file called ReplaceProgram.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                 Declare two variables and assing string and number (1-3).
+
+                 Write a code that replaces certain characters from the String message.
+            
+                When the number is:
+                    1: replace 'a' with 'e'
+                    2: replace 's' with 'r'
+                    3: replace 'o' with 'z'
+            
+                    Ex:
+                        message: java class is fun
+                        number: 1
+                        Output: jeve cless is fun
+            
+                    Ex:
+                        message: java class is fun
+                        number: 2
+                        Output: java clarr ir fun
+
+
+------------------------------------------
+
+Task #4 - SMSPart
+
+    Create a file called SMSPart.js in your Practice_Programming project and inside the day##_tasks package 
+
+        Task:
+                Declare a variable and assing string in the following format:
+                    “Sender: <James Bond>. From Number: [500-123-3456]. + Message: {“I love programming and problem solving}”
+            
+                    Separate these parts and print them separately:
+                        Sender: James Bond
+                        Number: 500-123-3456
+                        Message: I love programming and problem solving
+						
+
+
+------------------------------------------

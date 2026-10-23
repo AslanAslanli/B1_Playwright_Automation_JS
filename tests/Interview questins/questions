@@ -37,3 +37,5 @@ context.waitForEvent('page'):
 Waits for any new page/tab in the browser context
 More general
 Useful when you don't know which page creates the tab
+
+14. Write a test case where Chrome browser used to launch google.com and Edge is used to launch nba.com

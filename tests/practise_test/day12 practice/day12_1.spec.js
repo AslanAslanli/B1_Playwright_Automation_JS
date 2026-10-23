@@ -23,7 +23,7 @@ test.describe("Day 12 Playwright tasks - Task 1", () => {
 
   test.beforeEach("BeforeEach - element initiation", async ({ page }) => {
     // await page.goto("https://www.saucedemo.com/");
-    await page.goto(`${process.env.SAUCEDEMO_URL}`);
+    //await page.goto(`${process.env.SAUCEDEMO_URL}`);
 
     sauceUsername = page.locator("#user-name");
     saucePassword = page.locator("#password");
@@ -38,7 +38,7 @@ test.describe("Day 12 Playwright tasks - Task 1", () => {
     await expect(loginButton).toBeEnabled();
   });
 
-  test("Test 3 - Day_12_Task_1", {tag: "@smoke"}, async ({ page }) => {
+  test("Test 3 - Day_12_Task_1", async ({ page }) => {
     await sauceUsername.fill(process.env.SAUCE_USERNAME);
     await saucePassword.fill(process.env.SAUCE_PASSWORD);
     await loginButton.click();
@@ -46,7 +46,6 @@ test.describe("Day 12 Playwright tasks - Task 1", () => {
     products = page.getByText("Products");
     await expect(products).toBeVisible();
   });
-
 });
 
 //   Test 2: Test name: Playwright Website Tag: @regression
@@ -61,9 +60,11 @@ test("Test 2 - Day_12_Task_1", { tag: "@regression" }, async ({ page }) => {
   await expect(getStartedLink3).toBeVisible();
 });
 
-test("Hover Practice", {tag: "@regression"}, async({page}) => {
+test("Hover Practice", { tag: "@regression" }, async ({ page }) => {
   await page.goto(`${process.env.BASE_URL}/hovers`);
-  const firstImage = page.locator("//h5[.='name: user1']/../preceding-sibling::img");
+  const firstImage = page.locator(
+    "//h5[.='name: user1']/../preceding-sibling::img",
+  );
   const viewProfile = page.locator("//a[@href='/users/1']");
 
   await firstImage.hover();

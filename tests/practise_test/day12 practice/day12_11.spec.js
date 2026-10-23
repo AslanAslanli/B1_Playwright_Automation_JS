@@ -39,12 +39,12 @@ test.describe("Day 12 Task 11", () => {
     productsTitle = page.getByText("Products");
   });
 
-  test("Test 1: Name: Username Validation", {tag: "@smoke"}, async({page}) => {
+  test("Test 1: Name: Username Validation", async({page}) => {
     await expect(sauceUsername).toBeVisible();
     await expect(sauceUsername).toBeEnabled();
   });
 
-  test("Test 2: Name: Password Validation", {tag: "@smoke"}, async({page}) => {
+  test("Test 2: Name: Password Validation", async({page}) => {
     await expect(saucePassword).toBeVisible();
     await expect(saucePassword).toBeEnabled();
   });

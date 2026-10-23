@@ -30,13 +30,13 @@ test.describe("Login Regression Suite", () => {
     productsTitle = page.getByText("Products");
   });
 
-  test("Test 1: Field Validations", {tag: "@smoke"}, async({page}) => {
+  test("Test 1: Field Validations", async({page}) => {
     await expect(sauceUsername).toBeVisible();
     await expect(saucePassword).toBeVisible();
     await expect(loginButton).toBeVisible();
   });
 
-  test("Test 2: JavaScript value assertions", {tag: "@smoke"}, async({page}) => {
+  test("Test 2: JavaScript value assertions", async({page}) => {
     let course = "Playwright"; 
     let students = 20; 
     let active = true;

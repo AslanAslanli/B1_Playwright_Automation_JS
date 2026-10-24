@@ -46,7 +46,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: false,
+    headless: !!process.env.CI
     // actionTimeout: 5000, //this is if you want to change the default wait time which is 3000
   },
 

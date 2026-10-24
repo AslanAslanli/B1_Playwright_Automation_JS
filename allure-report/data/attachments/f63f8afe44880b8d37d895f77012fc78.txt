@@ -1,0 +1,4 @@
+Login Tests - BeforeAll is executed
+Login Tests - Before each is executed
+Group 1 - Test 1 - smoke
+Login Tests - After each is executed
